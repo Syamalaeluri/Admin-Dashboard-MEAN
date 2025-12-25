@@ -1,0 +1,56 @@
+<div class="dashboard">
+
+  <h1>Admin Dashboard</h1>
+  <p class="subtitle">Welcome to Admin Dashboard</p>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Total Users</h3>
+      <p>{{ totalUsers }}</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>New Users (Last 7 Days)</h3>
+      <p>{{ recentUsers }}</p>
+    </div>
+  </div>
+
+  
+  <div class="chart-box">
+    <canvas id="userChart"></canvas>
+  </div>
+
+  
+  <h2>User Management</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Created At</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngIf="users.length === 0">
+        <td colspan="4" class="empty">No users found</td>
+      </tr>
+
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.createdAt | date:'medium' }}</td>
+        <td>
+          <button class="delete-btn" (click)="deleteUser(user._id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
