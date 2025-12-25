@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Admin Dashboard with Analytics & Reporting (MEAN Stack)
 
 ## Project Description
@@ -117,3 +118,7 @@ It demonstrates strong understanding of full-stack development using the MEAN st
 Author
 Syamala
 
+=======
+# Admin-Dashboard-MEAN
+A Admin Dashboard built using the MEAN stack featuring secure authentication, role-based access, real-time analytics, and interactive charts. The application enables admins to monitor user metrics and manage users efficiently through a clean and responsive UI.
+>>>>>>> a872c4f44ca6ad488a4c11802ea416460454ab83
